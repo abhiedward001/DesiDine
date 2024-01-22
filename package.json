@@ -1,0 +1,26 @@
+{
+  "name": "desidine",
+  "version": "1.0.0",
+  "description": "App for DesiDine",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "author": "Abhishek Jaiswal",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.3",
+    "postcss": "^8.4.33",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "@octokit/core": "^5.0.2",
+    "@reduxjs/toolkit": "^2.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.0.4",
+    "react-router-dom": "^6.20.0"
+  }
+}
