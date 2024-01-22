@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import ResturantCard from './RestuarantCard';
 import Shimmer from '../Shimmer';
 import Footer from '../Footer';
+import { Link } from 'react-router-dom';
 
 function CardRestuarantShowcase() {
   const [listOfResturants, setListOfResturnts] = useState([]);
@@ -50,7 +51,7 @@ function CardRestuarantShowcase() {
             </div>
           ) : (
             <div className="resContainer flex flex-wrap  justify-center pb-5 mb-3">
-              {filterResturants.map((item) => <ResturantCard resData={item} />)}
+              {filterResturants.map((item) =><Link key={item.info.id} to={`EachItem/${item.info.id}`}>  <ResturantCard resData={item} />   </Link>)}
             </div>
           )
       }

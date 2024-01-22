@@ -5,14 +5,21 @@ import CardRestuarantShowcase from './components/LandingPage/Restuarants/CardRes
 import EachRestaurant from './components/LandingPage/Restuarants/EachRestaurant';
 import Home from './components/LandingPage/Home';
 import Header from './components/LandingPage/Header';
+import { Provider } from "react-redux";
+import appStore from './utils/appStore';
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 export function App() {
   return (
-    <>
-      <Header />
-      <Outlet />
-    </>
+
+    <Provider store={appStore}>
+      <div className='Body'>
+        <Header />
+        <Outlet />
+      </div>
+    </Provider>
+
+
   )
 }
 
@@ -33,12 +40,22 @@ const router = createBrowserRouter([
         path: '/restaurant/:resId',
         element: <EachRestaurant />
       }
+      ,
+      {
+        path: '/restuarant/EachItem/:resId',
+        element: <EachRestaurant/>
+      }
     ]
   },
 
   {
     path: '/restuarant',
     element: <CardRestuarantShowcase />
+  }
+  ,
+  {
+    path: '/restuarant/EachItem/:resId',
+    element: <EachRestaurant/>
   }
 
 ]);
