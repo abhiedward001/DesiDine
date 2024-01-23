@@ -1,8 +1,8 @@
 import React from 'react'
 import reactDOM from "react-dom/client";
 import Home from './components/LandingPage/Home';
-import CardRestuarantShowcase from './components/LandingPage/Restuarants/CardRestuarantShowcase';
-import EachRestaurant from './components/LandingPage/Restuarants/EachRestaurant';
+import CardRestuarantShowcase from './components/Restuarants/CardRestuarantShowcase';
+import EachRestaurant from './components/Restuarants/EachRestaurant'
 import Home from './components/LandingPage/Home';
 import Header from './components/LandingPage/Header';
 import { Provider } from "react-redux";

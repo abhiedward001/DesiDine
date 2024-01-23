@@ -1,9 +1,9 @@
 import React from 'react'
-import ResSlider from '../ResSlider';
+import ResSlider from '../LandingPage/ResSlider';
 import { useEffect, useState } from 'react';
 import ResturantCard from './RestuarantCard';
-import Shimmer from '../Shimmer';
-import Footer from '../Footer';
+import Shimmer from '../LandingPage/Shimmer';
+import Footer from '../LandingPage/Footer';
 import { Link } from 'react-router-dom';
 
 function CardRestuarantShowcase() {
@@ -18,7 +18,9 @@ function CardRestuarantShowcase() {
 
   const fetchData = async () => {
 
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.680619997448414&lng=77.4815347418189&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    const swiggyApi="https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.680619997448414&lng=77.4815347418189&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+    const corsUrl='https://corsproxy.org/?'+ encodeURIComponent(swiggyApi);
+    const data = await fetch(corsUrl);
     const jsonData = await data.json();
     let arr = [5, 4, 3, 6, 2, 1, 0, 8, 7, 9, 10];
     let i = 0;

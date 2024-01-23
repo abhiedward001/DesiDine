@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import ResturantCard from './RestuarantCard';
-import Shimmer from '../Shimmer';
+import Shimmer from '../LandingPage/Shimmer';
 import { Link } from 'react-router-dom';
 
 function Restuarant({ filterResturants }) {

@@ -1,7 +1,7 @@
 import React from 'react'
-import { imgUrl } from '../../../utils/data';
+import { imgUrl } from '../../utils/data';
 import { useDispatch } from 'react-redux';
-import { addItem }  from '../../../utils/cartSlice';
+import { addItem }  from '../../utils/cartSlice';
 
 function FoodInfo({ itemValue }) {
  

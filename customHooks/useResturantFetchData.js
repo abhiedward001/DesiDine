@@ -11,8 +11,10 @@ const useResturantFetchData = (resId) => {
     }, [])
 
     const fetchCartData = async () => {
-        console.log(`${resURL}${resId}`)
-        const cartData = await fetch(`${resURL}${resId}`);
+        const url=`${resURL}${resId}`;
+        const corsUrl='https://corsproxy.org/?'+ encodeURIComponent(url);
+        // console.log(`${resURL}${resId}`)
+        const cartData = await fetch(corsUrl);
         const jsonCartData = await cartData.json();
         console.log(jsonCartData);
 
