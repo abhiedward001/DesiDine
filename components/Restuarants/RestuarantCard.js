@@ -4,7 +4,7 @@ import { imgUrl } from "../../utils/data";
 
 const ResturantCard = (props) => {
      
-    console.log(props.resData);
+    // console.log(props.resData);
     const { name, cuisines, avgRating, deliveryTime, cloudinaryImageId } = props.resData?.info;
     return (
         <div className="resCard  rounded-lg m-6  w-[350px] h-[400px]  bg-gray-100 hover:bg-gray-200 hover:scale-110 transition duration-500 cursor-pointer">

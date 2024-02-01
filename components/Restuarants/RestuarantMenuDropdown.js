@@ -15,7 +15,7 @@ function RestuarantMenuDropdown({ data ,toggle, setToggle}) {
                 <span className='text-2xl hover:cursor-pointer' onClick={toggleHandler}> {!toggle ? "⬇" : "⬆"} </span>
             </div>
             <div>
-                {console.log(data.itemCards)}
+                {/* {console.log(data.itemCards)} */}
                 <ul>
                     {data.itemCards.map((item) => {
                         return (<li key={item?.card?.info?.id} >{toggle && <FoodInfo  itemValue={item?.card?.info}></FoodInfo>}</li>)

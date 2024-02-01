@@ -8,13 +8,16 @@ import Header from './components/LandingPage/Header';
 import { Provider } from "react-redux";
 import appStore from './utils/appStore';
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { useState } from 'react';
+import CartRender from './components/Cart/CartRender';
 
 export function App() {
-  return (
+ 
 
+  return (
     <Provider store={appStore}>
       <div className='Body'>
-        <Header />
+        <Header></Header>
         <Outlet />
       </div>
     </Provider>
@@ -44,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: '/restuarant/EachItem/:resId',
         element: <EachRestaurant/>
+      },
+      {
+        path: '/cart',
+        element: <CartRender />
       }
     ]
   },
@@ -56,6 +63,10 @@ const router = createBrowserRouter([
   {
     path: '/restuarant/EachItem/:resId',
     element: <EachRestaurant/>
+  },
+  {
+    path: '/cart',
+    element: <CartRender />
   }
 
 ]);

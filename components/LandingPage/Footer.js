@@ -30,9 +30,9 @@ function Footer() {
           
             <div className='pt-10 px-4'>
             <ul className='flex flex-wrap px-4'>
-                <li className='px-2 mx-8 text-4xl'><i class="fa-solid fa-envelope"></i></li>
-                <li className='px-2 mx-8 text-4xl' ><i class="fa-brands fa-linkedin"></i></li>
-                <li className='px-2  mx-8 text-4xl'><i class="fa-brands fa-github"></i></li>
+                <li className='px-2 mx-8 text-4xl'><i className="fa-solid fa-envelope"></i></li>
+                <li className='px-2 mx-8 text-4xl' ><i className="fa-brands fa-linkedin"></i></li>
+                <li className='px-2  mx-8 text-4xl'><i className="fa-brands fa-github"></i></li>
 
             </ul>
             </div>

@@ -1,10 +1,14 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import CartIcon from '../Cart/CartIcon';
+import { useState } from 'react';
 import { UseSelector, useSelector } from 'react-redux';
 
-function Header() {
+function Header(props) {
+
+    
     const cartItems=useSelector((store)=>store.cart.items);
+    // console.log(cartItems);
     return (
         <div className="headerContainer  bg-gray-800 h-280 w-full mb-4">
             <div className="Header flex justify-between ">
@@ -20,7 +24,7 @@ function Header() {
                 </ul>
 
                 <ul className="flex  py-3">
-                    <li className="px-4  py-2 text-white text-2xl  " ><i class="fa-solid fa-cart-shopping"></i> Cart( {cartItems.length} )</li>
+                    <button className="px-4  py-2 text-white text-2xl" ><Link to='/Cart'> <i className="fa-solid fa-cart-shopping"></i> Cart( {cartItems.length} )</Link></button>
                     <li className="px-4  py-2 text-white font-mono text-lg font-bold hover:bg-gray-900 hover:rounded-md antialiased">SignIn</li>
                 </ul>
             </div>

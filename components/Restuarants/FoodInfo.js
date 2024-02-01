@@ -6,9 +6,12 @@ import { addItem }  from '../../utils/cartSlice';
 function FoodInfo({ itemValue }) {
  
      const dispatch=useDispatch();
-     const cartItemAddHandler=()=>{
-        dispatch(addItem(itemValue));
+
+     const cartItemAddHandler=(items)=>{
+        dispatch(addItem(items));
+        console.log(items);
      }
+     
     return (
         <div className="my-2 py-4 border-b border-black text-left flex justify-between ">
             {/* {console.log(itemValue)} */}
@@ -21,7 +24,7 @@ function FoodInfo({ itemValue }) {
             <div className="w-3/12 p-4" >
                 <img alt="image not available" className='w-auto' src={imgUrl + itemValue.imageId}></img>
                 <div>
-                    <button className='bg-blue-300 m-2 rounded-lg w-16' onClick={cartItemAddHandler}>+ ADD -</button>
+                    <button className='bg-blue-300 m-2 rounded-lg w-16' onClick={()=>cartItemAddHandler(itemValue)}>+ ADD -</button>
                 </div>
 
             </div>
