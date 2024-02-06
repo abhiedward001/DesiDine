@@ -1,18 +1,22 @@
 import React from 'react'
 import { imgUrl } from '../../utils/data';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItem, updateItem } from '../../utils/cartSlice';
+import { addItem,updateItem } from '../../utils/cartSlice';
+import { useState } from 'react';
 
-function FoodInfo({ itemValue }) {
+function FoodInfo({ itemValue ,setShowFlashMessage}) {
 
     const dispatch = useDispatch();
     const cartItems = useSelector((store) => store.cart.items);
-    // if(itemValue.price===NaN){
-    //     itemValue.price=100;
-    // }
+   
 
     const cartItemAddHandler = (items) => {
 
+        setShowFlashMessage(true);
+        setTimeout(() => {
+          setShowFlashMessage(false);
+        }, 3000);
+        
         let check = false;
         cartItems.map((eachItem) => {
             if (eachItem.id === items.id) {
@@ -34,6 +38,7 @@ function FoodInfo({ itemValue }) {
 
     return (
         <div className="my-2 py-4 border-b border-black text-left flex justify-between ">
+          
             {/* {console.log(itemValue)} */}
             <div className="w-9/12 py-4">
                 <h3 className='font-bold text-lg'>{itemValue?.name}</h3>
