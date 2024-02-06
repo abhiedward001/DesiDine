@@ -4,6 +4,7 @@ import Shimmer from "../LandingPage/Shimmer";
 import { useParams } from "react-router-dom";
 import useResturantFetchData from '../../customHooks/useResturantFetchData';
 import RestuarantMenuDropdown from "./RestuarantMenuDropdown";
+import ResMenuShimmer from "../Shimmer/ResMenuShimmer";
 
 const Restuarant = () => {
     const {resId}=useParams();
@@ -12,7 +13,7 @@ const Restuarant = () => {
 
    
  
-    if (Object.keys(resInfo).length === 0) return <Shimmer />;
+    if (Object.keys(resInfo).length === 0) return <ResMenuShimmer />;
 
     const menuitems = resInfo?.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards;
     const { name } = resInfo?.data?.cards[0]?.card?.card?.info;

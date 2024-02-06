@@ -16,7 +16,7 @@ function Footer() {
             <div className='pt-10 px-4'>
                 <h1 className='text-4xl font-bold '>Product</h1>
                 <ul className='py-12' >
-                    <li className='py-2'> FoodHunt</li>
+                    <li className='py-2'> DesiDine</li>
                 </ul>
             </div>
 
@@ -30,8 +30,8 @@ function Footer() {
           
             <div className='pt-10 px-4'>
             <ul className='flex flex-wrap px-4'>
-                <li className='px-2 mx-8 text-4xl'><i className="fa-solid fa-envelope"></i></li>
-                <li className='px-2 mx-8 text-4xl' ><i className="fa-brands fa-linkedin"></i></li>
+                <li className='px-2 mx-8 text-4xl'><a href="mailto:iam001abhi@gmail.com" target="_blank"><i className="fa-solid fa-envelope"></i></a></li>
+                <li className='px-2 mx-8 text-4xl' ><a href='https://www.linkedin.com/in/abhishek-jaiswal-b67296191/' target="_blank"><i className="fa-brands fa-linkedin"></i></a></li>
                 <li className='px-2  mx-8 text-4xl'><i className="fa-brands fa-github"></i></li>
 
             </ul>

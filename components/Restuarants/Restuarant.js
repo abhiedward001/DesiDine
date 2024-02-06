@@ -23,7 +23,7 @@ function Restuarant({ filterResturants }) {
                 {(filterResturants.length === 0) ? 
                 ( <div className="resContainer flex flex-wrap  justify-center pb-5 mb-3">
                     <Shimmer ></Shimmer></div>
-                    ) : <div className="resContainer flex flex-wrap  justify-center pb-5 mb-3">
+                    ) : <div className="resContainer flex flex-wrap  justify-center pb-5 ">
 
                     {
                         view ? (
