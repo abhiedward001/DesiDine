@@ -19,7 +19,7 @@ function Header(props) {
                 <ul className="flex  py-3">
                     <button className="px-4 py-2   text-white font-mono text-lg font-bold hover:bg-gray-900 hover:rounded-md antialiased"><Link to='/'> HOME </Link> </button>
                     <button className="px-4  py-2  text-white font-mono text-lg font-bold hover:bg-gray-900 hover:rounded-md antialiased"><Link to='/restuarant'> Restuarants </Link></button>
-                    <button className="px-4  py-2  text-white font-mono text-lg font-bold hover:bg-gray-900 hover:rounded-md antialiased">About Us</button>
+                    <button className="px-4  py-2  text-white font-mono text-lg font-bold hover:bg-gray-900 hover:rounded-md antialiased"><Link to='/about'>About Us</Link></button>
                     <button className="login-Btn px-2 py-2 text-white font-mono text-md font-bold hover:bg-gray-900 hover:rounded-md antialiased"> </button>
                 </ul>
 

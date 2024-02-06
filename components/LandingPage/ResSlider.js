@@ -9,7 +9,7 @@ function ResSlider() {
     <img className='w-full h-[600px] opacity-95' src='https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?cs=srgb&dl=pexels-chan-walrus-958545.jpg&fm=jpg' alt=''></img>
         <Carousel.Caption>
         <h3 className='text-4xl font-bold font-mono text-green-200'>Being Foody is good sometimes</h3>
-        <p className='py-2'>Let's Order Something tasty and healthy</p>
+        <p className='py-2 text-white '>Let's Order Something tasty and healthy</p>
       </Carousel.Caption>
         </div>
     
@@ -32,7 +32,7 @@ function ResSlider() {
     <img className='w-full h-[600px] opacity-95' src='https://assets.gqindia.com/photos/6213cbed18140d747a9b0a6e/16:9/w_1920,h_1080,c_limit/new%20restaurant%20menus%20in%20Mumbai.jpg' alt=''></img>
         <Carousel.Caption>
         <h3 className='text-4xl font-bold font-mono text-amber-100'>Mid-Night Cravings?</h3>
-        <p className='py-2'>Add some items in your cart</p>
+        <p className='py-2 text-white '>Add some items in your cart</p>
       </Carousel.Caption>
         </div>
     

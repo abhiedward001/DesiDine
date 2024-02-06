@@ -10,7 +10,7 @@ function RestuarantMenuDropdown({ data ,toggle, setToggle,setShowFlashMessage}) 
   
     return (
 
-        <div className="w-6/12 mx-auto bg-gray-100 shadow-sm my-4 p-4 ">
+        <div className="w-6/12 mx-auto bg-gray-200 shadow-md rounded-sm my-4 p-4 ">
               
             <div className='flex flex-wrap justify-between cursor-grab' onClick={toggleHandler}>
                 <span className="font-bold text-2xl">{data.title} ({data.itemCards.length})</span>

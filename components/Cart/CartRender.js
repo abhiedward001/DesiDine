@@ -3,6 +3,7 @@ import { UseSelector, useSelector } from 'react-redux';
 import CartIcon from './CartIcon';
 import CartUi from './CartUi';
 import { Link } from 'react-router-dom';
+import Footer from '../LandingPage/Footer';
 
 
 function CartRender() {
@@ -23,7 +24,7 @@ function CartRender() {
     {cartItems.length===0 && <h1 className='flex justify-center text-4xl' >Please, Insert some items in your cart 👀</h1>}
     </div>
     
-      <div className='bg-gray-200 w-6/12 mx-auto my-24 shadow-md rounded-lg '>
+      <div className='bg-white w-6/12 mx-auto my-24 shadow-[0_-1px_38px_-2px_rgba(0,0,0,0.3)] rounded-lg '>
        
         {cartItems.map(items => <CartUi key={items.id} items={items}></CartUi>)}
        {cartItems.length!==0 &&  <div className='Checkout w-6/12 mx-auto my-4  py-4'>
@@ -35,16 +36,18 @@ function CartRender() {
           </ul>
           <ul className='flex flex-wrap justify-between my-4'>
             <li className='font-bold'>Total</li>
-            <li className='font-bold'>₹ {sumWithInitial+30}</li>
+            <li className='font-bold '>₹ {sumWithInitial+30}</li>
           </ul>
           <ul className='flex flex-col items-center  py-4'>
-            <button className='bg-blue-200  rounded-md px-3 h-8'>Proceed To Checkout</button><br></br>
-            <button className='bg-gray-700 text-white  rounded-md px-3 h-10'><Link to='/restuarant'>Continue Adding More Food</Link></button>
+            <button className='bg-blue-700 text-white rounded-md px-3 h-10'>Proceed To Checkout</button><br></br>
+            {/* <button className='bg-gray-700 text-white  rounded-md px-3 h-10'><Link to='/restuarant'>Continue Adding More Food</Link></button> */}
           </ul>
 
         </div>}
+      
       </div>
-
+      
+      <Footer></Footer>
     </>
 
   )

@@ -10,6 +10,7 @@ import appStore from './utils/appStore';
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from 'react';
 import CartRender from './components/Cart/CartRender';
+import About from './components/About';
 
 export function App() {
  
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: '/cart',
         element: <CartRender />
+      },
+      {
+        path:'/about',
+        element:<About></About>
       }
     ]
   },
@@ -67,6 +72,10 @@ const router = createBrowserRouter([
   {
     path: '/cart',
     element: <CartRender />
+  },
+  {
+    path:'/about',
+    element:<About></About>
   }
 
 ]);
