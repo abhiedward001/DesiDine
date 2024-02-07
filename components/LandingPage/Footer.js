@@ -1,22 +1,22 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 function Footer() {
     return (
-        <div className='footer flex flex-wrap justify-between bg-gray-900 text-white mx-auto '>
+        <div className='footer flex flex-wrap justify-between bg-gray-900 text-white mx-auto relative  bottom-0 w-full'>
             <div className='pt-10 mx-16'>
                 <h1 className='text-4xl font-bold text-white'>Company</h1>
                 <ul className='py-12' >
                     <li className='py-2'> Contacts</li>
                     <li className='py-2'> Careers</li>
                     <li className='py-2'> FaQ</li>
-                    <li className='py-2'> About Us</li>
+                    <li className='py-2'> <Link to='/about'>About Us</Link></li>
                 </ul>
             </div>
 
             <div className='pt-10 px-4'>
                 <h1 className='text-4xl font-bold text-white'>Product</h1>
                 <ul className='py-12' >
-                    <li className='py-2'> DesiDine</li>
+                    <li className='py-2'> <Link to='/'>DesiDine</Link></li>
                 </ul>
             </div>
 

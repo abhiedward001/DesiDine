@@ -19,9 +19,9 @@ function CartRender() {
   return (
     <>
      
-    <div className='w-6/12 mx-auto mt-12  py-4 px-auto '>
+    <div className='w-6/12 mx-auto mt-12  py-4 px-auto  h-28'>
     {cartItems.length!==0 && <h1 className='flex justify-center text-4xl' >Your Cart Items !!</h1>}
-    {cartItems.length===0 && <h1 className='flex justify-center text-4xl' >Please, Insert some items in your cart 👀</h1>}
+    {cartItems.length===0 && <h1 className='flex justify-center text-4xl' >Please, Insert some food in your cart 👀</h1>}
     </div>
     
       <div className='bg-white w-6/12 mx-auto my-24 shadow-[0_-1px_38px_-2px_rgba(0,0,0,0.3)] rounded-lg '>

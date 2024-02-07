@@ -17,7 +17,7 @@ export function App() {
 
   return (
     <Provider store={appStore}>
-      <div className='Body'>
+      <div className='Body '>
         <Header></Header>
         <Outlet />
       </div>
