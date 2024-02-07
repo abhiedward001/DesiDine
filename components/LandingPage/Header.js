@@ -6,7 +6,10 @@ import { UseSelector, useSelector } from 'react-redux';
 
 function Header(props) {
 
-    
+    const [login,setLogin]=useState(false);   
+    const loginHandler=()=>{
+        setLogin(!login);
+    } 
     const cartItems=useSelector((store)=>store.cart.items);
     // console.log(cartItems);
     return (
@@ -25,7 +28,8 @@ function Header(props) {
 
                 <ul className="flex  py-3">
                     <button className="px-4  py-2 text-white text-2xl" ><Link to='/Cart'> <i className="fa-solid fa-cart-shopping"></i> Cart( {cartItems.length} )</Link></button>
-                    <button className="px-4  py-2 text-white font-mono text-lg font-bold hover:bg-gray-900 hover:rounded-md antialiased">SignIn</button>
+                   {login && <button className="px-3 py-2 text-white font-mono text-lg font-bold hover:bg-gray-900 hover:rounded-md antialiased" onClick={loginHandler}>SignIn</button>} 
+                    {!login && <button className="px-3  py-2 text-white font-mono text-lg font-bold hover:bg-gray-900 hover:rounded-md antialiased" onClick={loginHandler}>SignUp</button>}
                 </ul>
             </div>
 
