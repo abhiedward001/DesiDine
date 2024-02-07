@@ -47,7 +47,7 @@ function FoodInfo({ itemValue ,setShowFlashMessage}) {
             </div>
 
             <div className="w-3/12 p-4" >
-                <img alt="image not available" className='w-auto border border-black rounded-sm' src={imgUrl + itemValue.imageId}></img>
+                <img alt="image not available" className='w-32 h-32 border border-black rounded-md' src={imgUrl + itemValue.imageId}></img>
                 <div>
                     <button className='bg-blue-300 m-2 rounded-lg w-20' onClick={() => cartItemAddHandler(itemValue)}>ADD</button>
                 </div>

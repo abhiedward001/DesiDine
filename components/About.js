@@ -16,7 +16,7 @@ function About() {
     <>
       <div className='cont h-auto'>
         <div className='h-auto'>
-          <h1>Loding some top restuarants</h1>
+          <h1>Click on Restuarants and Add some awesome foods</h1>
           <p>Feeling Hungry? Checkout some best foods :)</p>
           <p className={style.small}>Hurry up!!! Add it to your cart</p>
         </div>
@@ -31,7 +31,7 @@ function About() {
         </div>
 
         <div className='resume my-16 py-8 mx-auto w-6/12'>
-          <h1 className='m-3 p-6 '>Portfolio is still under construction!!</h1>
+          <h1 className='m-3 p-6 '>Portfolio is still under construction 😕</h1>
           <h1 className='m-4 p-6 text-gray-400'>We will update this soon.Till then you can download the resume 🧑🏻‍💻</h1>
           <div className=' ml-80'><button className='bg-gray-700 text-white p-2 rounded-md w-28  hover:bg-sky-800 ' onClick={handleDownload}>Resume ⬇</button>
           </div>

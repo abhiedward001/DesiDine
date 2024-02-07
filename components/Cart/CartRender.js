@@ -4,6 +4,7 @@ import CartIcon from './CartIcon';
 import CartUi from './CartUi';
 import { Link } from 'react-router-dom';
 import Footer from '../LandingPage/Footer';
+import Animation from '../../utils/Animation';
 
 
 function CartRender() {
@@ -19,12 +20,13 @@ function CartRender() {
   return (
     <>
      
-    <div className='w-6/12 mx-auto mt-12  py-4 px-auto  h-28'>
+    <div className='w-6/12 mx-auto py-4 px-auto  '>
     {cartItems.length!==0 && <h1 className='flex justify-center text-4xl' >Your Cart Items !!</h1>}
     {cartItems.length===0 && <h1 className='flex justify-center text-4xl' >Please, Insert some food in your cart 👀</h1>}
+    {cartItems.length===0 && <Animation></Animation>}
     </div>
     
-      <div className='bg-white w-6/12 mx-auto my-24 shadow-[0_-1px_38px_-2px_rgba(0,0,0,0.3)] rounded-lg '>
+      <div className='bg-white w-6/12 mx-auto mb-20 shadow-[0_-1px_38px_-2px_rgba(0,0,0,0.3)] rounded-lg '>
        
         {cartItems.map(items => <CartUi key={items.id} items={items}></CartUi>)}
        {cartItems.length!==0 &&  <div className='Checkout w-6/12 mx-auto my-4  py-4'>
@@ -35,8 +37,8 @@ function CartRender() {
             <li className='my-2'>Tax  ₹40</li>
           </ul>
           <ul className='flex flex-wrap justify-between my-4'>
-            <li className='font-bold'>Total</li>
-            <li className='font-bold '>₹ {sumWithInitial+30}</li>
+            <li className='font-bold text-xl'>Total</li>
+            <li className='font-bold text-xl'>₹ {sumWithInitial+30}</li>
           </ul>
           <ul className='flex flex-col items-center  py-4'>
             <button className='bg-blue-700 text-white rounded-md px-3 h-10'>Proceed To Checkout</button><br></br>
