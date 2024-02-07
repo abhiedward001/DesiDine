@@ -13,7 +13,7 @@ function CartRender() {
   console.log(cartItems);
   let initialValue=0;
   const sumWithInitial = cartItems.reduce(
-    (accumulator, currentValue) => accumulator + (currentValue.price/100)*(currentValue.qty),
+    (accumulator, currentValue) => accumulator + (currentValue.price/100 || currentValue.defaultPrice/100)*(currentValue.qty),
     initialValue,
   );
   // console.log(sumWithInitial);

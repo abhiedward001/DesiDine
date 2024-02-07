@@ -22,12 +22,12 @@ function CartUi({ items }) {
       <img className='rounded-md border border-black h-52 w-60' src={`${cartImageUrl}${items.imageId}`} alt="no image"></img>
       <ul className='my-auto '>
         <li className='py-2 font-bold 	text-pretty'>{items.name}</li>
-        <li className='py-2 text-gray-600'>{`₹${items.price / 100}`}</li>
+        <li className='py-2 text-gray-600'>{`₹${items.price / 100 || items.defaultPrice/100} `}</li>
         <button className='bg-gray-700   text-white px-3 mr-2 rounded-md my-3' onClick={addItemHandler}>+</button>
         <span className='my-3'>{items.qty}</span>
         <button className='bg-gray-700  text-white px-3 ml-2 rounded-md my-3' onClick={removeItemHandler}>-</button>
       </ul>
-      <div className='my-auto font-semibold text-xl '>{`₹${(items.price / 100) * (items.qty)}`}</div>
+      <div className='my-auto font-semibold text-xl '>{`₹${(items.price / 100 || items.defaultPrice/100) * (items.qty)}`}</div>
     </div>
 
 

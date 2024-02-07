@@ -5,7 +5,7 @@ import { addItem,updateItem } from '../../utils/cartSlice';
 import { useState } from 'react';
 
 function FoodInfo({ itemValue ,setShowFlashMessage}) {
-
+//    console.log(itemValue);
     const dispatch = useDispatch();
     const cartItems = useSelector((store) => store.cart.items);
    
@@ -42,7 +42,7 @@ function FoodInfo({ itemValue ,setShowFlashMessage}) {
             {/* {console.log(itemValue)} */}
             <div className="w-9/12 py-4">
                 <h3 className='font-bold text-lg'>{itemValue?.name}</h3>
-                <span>₹ {itemValue.price / 100}</span>
+                <span>₹ {itemValue.price/100 || itemValue.defaultPrice/100}</span>
                 <p className='text-gray-600 py-3'> {itemValue?.description}</p>
             </div>
 
