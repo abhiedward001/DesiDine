@@ -1,5 +1,5 @@
 import React from 'react'
-import * as style from "./About.module.css";
+import style from './About.module.css';
 import Footer from './LandingPage/Footer';
 
 function About() {
