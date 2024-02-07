@@ -1,5 +1,5 @@
 import React from 'react'
-import headershow from "../../assets/headershow.jpg"
+// import headershow from "../../assets/headershow.jpg"
 function HeaderShowcase() {
   return (
     <>
@@ -13,7 +13,7 @@ function HeaderShowcase() {
                 </div>
 
                 <div className='Image h-[500px]  w-10/12 mx-auto '>
-                    <img className='h-[500px] w-full rounded-b-[350px] rounded-t-[20px] ' src={headershow} alt='Not displaying'></img>
+                    <img className='h-[500px] w-full rounded-b-[350px] rounded-t-[20px] ' src="https://raw.githubusercontent.com/abhiedward001/AssetDesiDine/main/headerShow.jpg" alt='Not displaying'></img>
                 </div>
 
                 <div className='w-6/12  mx-auto mt-[120px] flex justify-center'>
