@@ -9,7 +9,7 @@ function ResSlider() {
     <Carousel >
        <Carousel.Item className='w-full h-[600px] '> 
     <div>
-    <img className='w-full h-[600px] opacity-95' src="https://github.com/abhiedward001/AssetDesiDine/blob/main/slide.jpg?raw=true" alt=''></img>
+    <img className='w-full h-[600px] opacity-95' src="https://cdn.jsdelivr.net/gh/abhiedward001/AssetDesiDine/slide.jpg" alt=''></img>
         <Carousel.Caption>
         <h3 className='text-4xl font-bold font-mono text-green-200'>Being Foody is good sometimes</h3>
         <p className='py-2 text-white '>Let's Order Something tasty and healthy</p>
@@ -20,7 +20,7 @@ function ResSlider() {
 
     <Carousel.Item className='w-full h-[600px]'>
         <div>
-        <img className='w-full h-[600px] opacity-95' src="https://github.com/abhiedward001/AssetDesiDine/blob/main/slide2.jpg?raw=true" alt=''></img>
+        <img className='w-full h-[600px] opacity-95' src="https://cdn.jsdelivr.net/gh/abhiedward001/AssetDesiDine/slide2.jpg" alt=''></img>
         <Carousel.Caption>
         <h3 className='text-4xl font-bold font-mono text-blue-200'>Feeling Hungry??</h3>
         <p className='py-2 text-white mb-4'>Checkout Yummy Foods Nearby You!!!</p>
@@ -32,7 +32,7 @@ function ResSlider() {
    
     <Carousel.Item className='w-full h-[600px]'>
     <div >
-    <img className='w-full h-[600px] opacity-95' src="https://raw.githubusercontent.com/abhiedward001/AssetDesiDine/main/slide3.webp" alt=''></img>
+    <img className='w-full h-[600px] opacity-95' src="https://cdn.jsdelivr.net/gh/abhiedward001/AssetDesiDine/slide3.webp" alt=''></img>
         <Carousel.Caption>
         <h3 className='text-4xl font-bold font-mono text-amber-100'>Mid-Night Cravings?</h3>
         <p className='py-2 text-white '>Add some items in your cart</p>

@@ -1,9 +1,9 @@
 import React from 'react'
 import reactDOM from "react-dom/client";
 import Home from './components/LandingPage/Home';
-import CardRestuarantShowcase from './components/Restuarants/CardRestuarantShowcase';
-import EachRestaurant from './components/Restuarants/EachRestaurant'
-import Home from './components/LandingPage/Home';
+// import CardRestuarantShowcase from './components/Restuarants/CardRestuarantShowcase';
+// import EachRestaurant from './components/Restuarants/EachRestaurant'
+// import Home from './components/LandingPage/Home';
 import Header from './components/LandingPage/Header';
 import { Provider } from "react-redux";
 import appStore from './utils/appStore';
@@ -11,10 +11,22 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from 'react';
 import CartRender from './components/Cart/CartRender';
 import About from './components/About';
+import { lazy,Suspense } from 'react';
+import Animation from './utils/Animation';
+import CartManage from './components/cartManage';
 
+async function delayForDemo(promise) {
+  await new Promise(resolve => {
+    setTimeout(resolve, 5000);
+  });
+  return promise;
+}
+const HomeLazy=lazy(()=>delayForDemo(import('./components/LandingPage/Home')));
+const CardRestuarantShowcase = lazy(() => delayForDemo(import('./components/Restuarants/CardRestuarantShowcase')));
+const EachRestaurantLazy=lazy(()=>delayForDemo(import('./components/Restuarants/EachRestaurant')));
 export function App() {
- 
 
+  
   return (
     <Provider store={appStore}>
       <div className='Body '>
@@ -34,20 +46,20 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />
+        element: <Suspense fallback={<Animation></Animation>}> <HomeLazy/> </Suspense>
       },
       {
         path: '/restuarant',
-        element: <CardRestuarantShowcase />
+        element: <Suspense fallback={<Animation></Animation>}><CardRestuarantShowcase /></Suspense>
       },
       {
         path: '/restaurant/:resId',
-        element: <EachRestaurant />
+        element: <Suspense fallback={<Animation></Animation>}> <EachRestaurantLazy/> </Suspense>
       }
       ,
       {
         path: '/restuarant/EachItem/:resId',
-        element: <EachRestaurant/>
+        element: <Suspense fallback={<Animation></Animation>}> <EachRestaurantLazy/> </Suspense>
       },
       {
         path: '/cart',
@@ -57,17 +69,22 @@ const router = createBrowserRouter([
         path:'/about',
         element:<About></About>
       }
+      ,
+      {
+        path:'/test',
+        element:<CartManage/>
+      }
     ]
   },
 
   {
     path: '/restuarant',
-    element: <CardRestuarantShowcase />
+    element: <Suspense fallback={<Animation></Animation>}><CardRestuarantShowcase /></Suspense>
   }
   ,
   {
     path: '/restuarant/EachItem/:resId',
-    element: <EachRestaurant/>
+    element: <Suspense fallback={<Animation></Animation>}> <EachRestaurantLazy/> </Suspense>
   },
   {
     path: '/cart',
@@ -76,6 +93,10 @@ const router = createBrowserRouter([
   {
     path:'/about',
     element:<About></About>
+  },
+  {
+    path:'/test',
+    element:<CartManage/>
   }
 
 ]);

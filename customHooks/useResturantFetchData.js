@@ -16,7 +16,7 @@ const useResturantFetchData = (resId) => {
         // console.log(`${resURL}${resId}`)
         const cartData = await fetch(corsUrl);
         const jsonCartData = await cartData.json();
-        console.log(jsonCartData);
+        // console.log(jsonCartData);
 
         setCartDetailObject(jsonCartData);
     }

@@ -30,9 +30,9 @@ function Footer() {
           
             <div className='pt-10 px-4 my-10'>
             <ul className='flex flex-wrap px-4'>
-                <li className='px-2 mx-8 text-4xl'><a href="mailto:iam001abhi@gmail.com" target="_blank"><i className="fa-solid fa-envelope"></i></a></li>
-                <li className='px-2 mx-8 text-4xl' ><a href='https://www.linkedin.com/in/abhishek-jaiswal-b67296191/' target="_blank"><i className="fa-brands fa-linkedin"></i></a></li>
-                <li className='px-2  mx-8 text-4xl'><a href='https://github.com/abhiedward001' target='_blank'><i className="fa-brands fa-github"></i></a></li>
+                <li className='px-2 mx-8 text-4xl'><a href="mailto:iam001abhi@gmail.com" target="_blank"><i className="fa-solid fa-envelope text-red-500"></i></a></li>
+                <li className='px-2 mx-8 text-4xl' ><a href='https://www.linkedin.com/in/abhishek-jaiswal-b67296191/' target="_blank"><i className="fa-brands fa-linkedin text-blue-600"></i></a></li>
+                <li className='px-2  mx-8 text-4xl'><a href='https://github.com/abhiedward001' target='_blank'><i className="fa-brands fa-github text-green-600"></i></a></li>
 
             </ul>
             </div>

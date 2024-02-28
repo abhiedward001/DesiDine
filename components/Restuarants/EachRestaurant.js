@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react"
-
-import Shimmer from "../LandingPage/Shimmer";
 import { useParams } from "react-router-dom";
 import useResturantFetchData from '../../customHooks/useResturantFetchData';
 import RestuarantMenuDropdown from "./RestuarantMenuDropdown";
@@ -9,6 +7,7 @@ import ResMenuShimmer from "../Shimmer/ResMenuShimmer";
 const Restuarant = () => {
     const { resId } = useParams();
     const resInfo = useResturantFetchData(resId); // using custom hook for fetching the data
+
     const [elemIndex, setElemIndex] = useState(0);
     const [showFlashMessgae, setShowFlashMessage] = useState(false);
 
@@ -16,8 +15,23 @@ const Restuarant = () => {
 
     if (Object.keys(resInfo).length === 0) return <ResMenuShimmer />;
 
-    const menuitems = resInfo?.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards;
-    const { name } = resInfo?.data?.cards[0]?.card?.card?.info;
+    let arr=[5,4,3,6,2,1,0,8,7,9,10];
+    let i = 0,j=0;
+    for (; i <= 10; i++) {
+        if (resInfo?.data?.cards[i]?.groupedCard?.cardGroupMap?.REGULAR?.cards) {
+            break;
+        }
+    }
+    for (; j <= 10; j++) {
+        if (resInfo?.data?.cards[j]?.card?.card?.info) {
+            break;
+        }
+    }
+    // console.log(i);
+    // console.log(j);
+
+    const menuitems = resInfo?.data?.cards[i]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+    const { name } = resInfo?.data?.cards[j]?.card?.card?.info;
     // console.log(resInfo)
     const filterCateogary = menuitems.filter((item) => {
         return (item?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
