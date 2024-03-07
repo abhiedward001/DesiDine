@@ -21,7 +21,7 @@ function Footer() {
             </div>
 
             <div className='pt-10 px-4'>
-                <h1 className='text-4xl font-bold text-white'>Complaince</h1>
+                <h1 className='text-4xl font-bold text-white'>Compliance</h1>
                 <ul className='py-12' >
                     <li className='py-2'> Privacy Policy</li>
                     <li className='py-2'> Terms and Conditions</li>

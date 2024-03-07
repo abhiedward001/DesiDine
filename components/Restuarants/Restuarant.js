@@ -16,7 +16,7 @@ function Restuarant({ filterResturants }) {
         <>
             <div className='Resturants mt-3  mx-auto bg-gray-200 '>
                 <div className='justify-center text-center pt-20'>
-                    <h1 className='text-3xl text-red-400 font-bold pb-3'>Featured Resturants</h1>
+                    <h1 className='text-3xl text-red-400 font-bold pb-3'>Featured  Restaurants</h1>
                     <h3 className='text-lg text-gray-400 font-semibold  pb-2'>Based on Ratings</h3>
                 </div>
 

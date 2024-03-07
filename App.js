@@ -13,7 +13,7 @@ import CartRender from './components/Cart/CartRender';
 import About from './components/About';
 import { lazy,Suspense } from 'react';
 import Animation from './utils/Animation';
-import CartManage from './components/cartManage';
+import Login from './components/Auth/Login';
 
 async function delayForDemo(promise) {
   await new Promise(resolve => {
@@ -34,8 +34,6 @@ export function App() {
         <Outlet />
       </div>
     </Provider>
-
-
   )
 }
 
@@ -71,8 +69,8 @@ const router = createBrowserRouter([
       }
       ,
       {
-        path:'/test',
-        element:<CartManage/>
+        path:'/login',
+        element:<Login/>
       }
     ]
   },
@@ -95,8 +93,8 @@ const router = createBrowserRouter([
     element:<About></About>
   },
   {
-    path:'/test',
-    element:<CartManage/>
+    path:'/login',
+    element:<Login/>
   }
 
 ]);

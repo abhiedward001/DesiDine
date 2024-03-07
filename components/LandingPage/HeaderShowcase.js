@@ -6,7 +6,7 @@ function HeaderShowcase() {
             <div className='relative my-16'>
                 <div className='search absolute top-44 left-80 mx-32  opacity-80 '>
                     <h2 className='text-4xl text-[#ffffff] font-extrabold opacity-90'>Order Now</h2>
-                    <h3 className='text-2xl text-gray-200 font-semibold my-2'>From your nearest resturants</h3>
+                    <h3 className='text-2xl text-gray-200 font-semibold my-2'>From your nearest  restaurants</h3>
                     <input className='bg-white w-[550px] h-[55px] rounded-lg px-4 ' type='text' placeholder='Type Your Delivery Location'></input>
                     <button className='w-[90px] h-[55px] bg-red-400 rounded-lg mx-2' >Submit</button>
                     <h3 className='text-2xl my-3 text-[#ffffff] font-bold opacity-100'>We deliver in Bangalore,Delhi,Chandigarh,Hyderabad,Uttar Pradesh...</h3>
@@ -30,7 +30,7 @@ function HeaderShowcase() {
                 <div className='w-[200px] h-[300px] mx-12 '>
                     <i class="fa-brands fa-cc-discover text-5xl  my-4 ml-16"></i>
                     <h1 className='my-3 text-xl font-bold text-red-400'>Discover</h1>
-                    <p className='text-gray-500'>Find resturants that deliver to you by entering your address</p>
+                    <p className='text-gray-500'>Find  restaurants that deliver to you by entering your address</p>
                 </div>
 
                 <div className='w-[200px] h-[300px] mx-12 '>
