@@ -1,24 +1,19 @@
-import React from "react";
-import { useEffect, useState } from "react";
-
+import React, {useEffect, useState} from 'react';
 
 const useInternetStatus = () => {
+	const [internetStatus, setInternetStatus] = useState(true);
 
-    const [internetStatus, setInternetStatus] = useState(true);
+	useEffect(() => {
+		window.addEventListener('offline', e => {
+			setInternetStatus(false);
+		});
 
-    useEffect(() => {
+		window.addEventListener('online', e => {
+			setInternetStatus(true);
+		});
+	}, []);
 
-        window.addEventListener("offline", (e) => {
-            setInternetStatus(false);
-
-        });
-
-        window.addEventListener("online", (e) => {
-            setInternetStatus(true);
-        });
-  }, [])
-
-    return internetStatus;
-}
+	return internetStatus;
+};
 
 export default useInternetStatus;

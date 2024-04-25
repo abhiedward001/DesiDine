@@ -1,27 +1,25 @@
-import React from "react";
-import { useEffect,useState } from "react";
-import { resURL } from "../utils/data";
+import React, {useEffect, useState} from 'react';
+import {resURL} from '../utils/data';
 
-const useResturantFetchData = (resId) => {
+const useResturantFetchData = resId => {
+	const [cartDetailObject, setCartDetailObject] = useState({});
 
-    const [cartDetailObject, setCartDetailObject] = useState({});
+	useEffect(() => {
+		fetchCartData();
+	}, []);
 
-    useEffect(() => {
-        fetchCartData();
-    }, [])
+	const fetchCartData = async () => {
+		const url = `${resURL}${resId}`;
+		const corsUrl = 'https://thingproxy.freeboard.io/fetch/' + encodeURIComponent(url);
+		// Console.log(`${resURL}${resId}`)
+		const cartData = await fetch(corsUrl);
+		const jsonCartData = await cartData.json();
+		// Console.log(jsonCartData);
 
-    const fetchCartData = async () => {
-        const url=`${resURL}${resId}`;
-        const corsUrl='https://corsproxy.org/?'+ encodeURIComponent(url);
-        // console.log(`${resURL}${resId}`)
-        const cartData = await fetch(corsUrl);
-        const jsonCartData = await cartData.json();
-        // console.log(jsonCartData);
+		setCartDetailObject(jsonCartData);
+	};
 
-        setCartDetailObject(jsonCartData);
-    }
-    
-    return cartDetailObject;
-}
+	return cartDetailObject;
+};
 
 export default useResturantFetchData;
